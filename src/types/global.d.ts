@@ -29,4 +29,16 @@ declare global {
     height: number;
     tiles: Tile[];
   }
+  interface UserCore {
+    email: string;
+    full_name: string;
+    picture: string;
+  }
+  interface UserFull extends UserCore {
+    clientId: string;
+    access_token: string;
+  }
+  interface ReturnCount {
+    totalCount: number;
+  }
 }
