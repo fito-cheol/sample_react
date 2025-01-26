@@ -8,3 +8,4 @@
 - [ ] Working build file
 - [ ] react-test
 - [ ] SSL at local env
+- [ ] router setting
