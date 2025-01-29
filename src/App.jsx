@@ -6,6 +6,9 @@ import "./App.scss";
 import styles from "./App.module.scss";
 import AppTitle from "@/components/text/AppTitle";
 
+import AppRouter from "@/router/router";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -37,6 +40,25 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">홈</Link>
+              </li>
+              <li>
+                <Link to="/about">소개</Link>
+              </li>
+              <li>
+                <Link to="/contact">연락처</Link>
+              </li>
+            </ul>
+          </nav>
+
+          <AppRouter />
+        </div>
+      </Router>
     </>
   );
 }
