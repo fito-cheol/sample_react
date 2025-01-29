@@ -1,6 +1,7 @@
 ### TODO
 
-- [ ] env
+- [x] env
+- [x] import with @ (path alias) - in vscode setting: `preferences.importModuleSpecifier` as non-relative
 - [ ] sass
 - [ ] router
 - [ ] axios

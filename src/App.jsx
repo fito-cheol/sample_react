@@ -2,6 +2,9 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import "./App.scss";
+import styles from "./App.module.scss";
+import AppTitle from "@/components/text/AppTitle";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,7 +21,11 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <h2> {import.meta.env.VITE_APP_TITLE}</h2>
-      <h2>Current Mode {import.meta.env.MODE} </h2>
+      <span className="mode">Current Mode {import.meta.env.MODE} </span>
+      <span className={styles["mode--moduled"]}>
+        Current Mode {import.meta.env.MODE}
+      </span>
+      <AppTitle />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
