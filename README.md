@@ -2,7 +2,7 @@
 
 - [x] env
 - [x] import with @ (path alias) - in vscode setting: `preferences.importModuleSpecifier` as non-relative
-- [ ] sass
+- [x] sass
 - [ ] router
 - [ ] axios
 - [ ] redux or recoil
