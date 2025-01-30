@@ -7,6 +7,6 @@
 - [ ] axios
 - [x] redux or recoil
 - [x] eslint with prettier
-- [ ] Working build file
+- [x] Working build file
 - [ ] react-test
 - [ ] SSL at local env
