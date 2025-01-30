@@ -5,8 +5,8 @@
 - [x] sass
 - [x] router
 - [ ] axios
-- [ ] redux or recoil
-- [ ] prettier
+- [x] redux or recoil
+- [x] eslint with prettier
 - [ ] Working build file
 - [ ] react-test
 - [ ] SSL at local env

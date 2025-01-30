@@ -10,6 +10,9 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+build-dev
+build-staging
+build-prod
 *.local
 
 # Editor directories and files
@@ -24,4 +27,5 @@ dist-ssr
 *.sw?
 
 *storybook.log
-node_modules/.yarn-integrity
+*/.yarn-integrity
+
