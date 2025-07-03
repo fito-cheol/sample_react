@@ -1,0 +1,111 @@
+@import './common/mixins.scss';
+@import './common/variables.scss';
+
+.slideInForward {
+  @include slideIn;
+  animation: slideInForward 1s forwards;
+  @include media(pc) {
+    animation: slideInForwardPC 1s forwards;
+  }
+}
+
+.slideOutForward {
+  @include slideOut;
+  animation: slideOutForward 1s forwards;
+  @include media(pc) {
+    animation: slideOutForwardPC 1s forwards;
+  }
+}
+
+.slideInBackward {
+  @include slideIn;
+  animation: slideInBackward 1s forwards;
+  @include media(pc) {
+    animation: slideInBackwardPC 1s forwards;
+  }
+}
+
+.slideOutBackward {
+  @include slideOut;
+  animation: slideOutBackward 1s forwards;
+  @include media(pc) {
+    animation: slideOutBackwardPC 1s forwards;
+  }
+}
+
+@keyframes slideInForward {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInForwardPC {
+  from {
+    opacity: 0;
+    transform: none;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slideOutForward {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOutForwardPC {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+@keyframes slideInBackward {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInBackwardPC {
+  from {
+    opacity: 0;
+    transform: none;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slideOutBackward {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

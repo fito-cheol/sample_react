@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.scss';
-import './assets/reset.scss';
+import '@/assets/style/common/reset.scss';
+import '@/assets/style/transition.scss';
 
 import AppRouter from '@/router/router';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import { RecoilRoot } from 'recoil';
-import ScrollTotTop from '@/modules/ScrollToTop';
+import ScrollToTop from '@/modules/ScrollToTop';
 import Header from '@/components/layout/Header';
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
 			<RecoilRoot>
 				<Router>
 					<Header />
-					<ScrollTotTop />
+					<ScrollToTop />
+
 					<AppRouter />
 				</Router>
 			</RecoilRoot>

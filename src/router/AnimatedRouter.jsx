@@ -1,5 +1,5 @@
 import { useLocation, useNavigationType, useRoutes } from 'react-router-dom';
-import PathMapping from './PathMapping';
+import Routes from './Routes';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useRef } from 'react';
@@ -25,8 +25,8 @@ function AnimatedRouter() {
 		switchMain();
 	}
 
-	const mainElement = useRoutes(PathMapping(), location);
-	const subElement = useRoutes(PathMapping(), tranLocationRef.current);
+	const mainElement = useRoutes(Routes(), location);
+	const subElement = useRoutes(Routes(), tranLocationRef.current);
 
 	const isAMain = mainRef.current === 'A';
 	const isBMain = mainRef.current === 'B';
