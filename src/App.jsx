@@ -1,40 +1,25 @@
 import React from 'react';
-import './App.css';
 import './App.scss';
-import AppTitle from '@/components/text/AppTitle';
+import './assets/reset.scss';
 
 import AppRouter from '@/router/router';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import { RecoilRoot } from 'recoil';
-import TestEnvVar from '@/components/TestEnvVar';
 import ScrollTotTop from '@/modules/ScrollToTop';
+import Header from '@/components/layout/Header';
 
 function App() {
 	return (
-		<RecoilRoot>
-			<TestEnvVar />
-			<AppTitle />
-			<Router>
-				<div>
-					<nav>
-						<ul>
-							<li>
-								<Link to="/">홈</Link>
-							</li>
-							<li>
-								<Link to="/about">소개</Link>
-							</li>
-							<li>
-								<Link to="/contact">연락처</Link>
-							</li>
-						</ul>
-					</nav>
+		<div className="wrap">
+			<RecoilRoot>
+				<Router>
+					<Header />
 					<ScrollTotTop />
 					<AppRouter />
-				</div>
-			</Router>
-		</RecoilRoot>
+				</Router>
+			</RecoilRoot>
+		</div>
 	);
 }
 
