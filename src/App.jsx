@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import { RecoilRoot } from 'recoil';
 import TestEnvVar from '@/components/TestEnvVar';
+import ScrollTotTop from '@/modules/ScrollToTop';
 
 function App() {
 	return (
@@ -29,7 +30,7 @@ function App() {
 							</li>
 						</ul>
 					</nav>
-
+					<ScrollTotTop />
 					<AppRouter />
 				</div>
 			</Router>
