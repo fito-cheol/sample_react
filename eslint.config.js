@@ -9,6 +9,9 @@ export default [
 	pluginJs.configs.recommended,
 	pluginReact.configs.flat.recommended,
 	{
+		env:{
+			"jest/globals": true
+		},
 		files: ['**/*.{js,mjs,cjs,jsx,ts,tsx}'],
 		languageOptions: {
 			ecmaVersion: 2022,
@@ -31,8 +34,10 @@ export default [
 			'react-hooks': pluginReact,
 			prettier: prettierPlugin,
 			'unused-imports': unusedImports,
+			
 		},
 		rules: {
+			// ...prettierPlugin.configs.recommended.rules,
 			'react/react-in-jsx-scope': 'off',
 			'react/prefer-stateless-function': 'off',
 			'react/jsx-filename-extension': 'off',
@@ -51,7 +56,6 @@ export default [
 					argsIgnorePattern: '^_', // Ignore arguments prefixed with _
 				},
 			],
-			...prettierPlugin.configs.recommended.rules,
 		},
 	},
 ];
