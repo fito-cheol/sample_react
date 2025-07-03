@@ -1,34 +1,34 @@
-@import './common/mixins.scss';
-@import './common/variables.scss';
+@use './common/mixins' as mixins;
+@use './common/variables' as vars;
 
 .slideInForward {
-  @include slideIn;
   animation: slideInForward 1s forwards;
-  @include media(pc) {
+  @include mixins.slideIn;
+  @include mixins.media(vars.$G-breakpoints, pc) {
     animation: slideInForwardPC 1s forwards;
   }
 }
 
 .slideOutForward {
-  @include slideOut;
   animation: slideOutForward 1s forwards;
-  @include media(pc) {
+  @include mixins.slideOut;
+  @include mixins.media(vars.$G-breakpoints, pc) {
     animation: slideOutForwardPC 1s forwards;
   }
 }
 
 .slideInBackward {
-  @include slideIn;
   animation: slideInBackward 1s forwards;
-  @include media(pc) {
+  @include mixins.slideIn;
+  @include mixins.media(vars.$G-breakpoints, pc) {
     animation: slideInBackwardPC 1s forwards;
   }
 }
 
 .slideOutBackward {
-  @include slideOut;
   animation: slideOutBackward 1s forwards;
-  @include media(pc) {
+  @include mixins.slideOut;
+  @include mixins.media(vars.$G-breakpoints, pc) {
     animation: slideOutBackwardPC 1s forwards;
   }
 }
@@ -99,6 +99,7 @@
   }
 }
 
+
 @keyframes slideOutBackward {
   from {
     opacity: 1;
@@ -107,5 +108,16 @@
   to {
     opacity: 0;
     transform: translateX(100%);
+  }
+}
+
+@keyframes slideOutBackwardPC {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: none;
   }
 }
