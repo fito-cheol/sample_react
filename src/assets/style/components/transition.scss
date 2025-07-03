@@ -1,18 +1,20 @@
-@use './common/mixins' as mixins;
-@use './common/variables' as vars;
+@use '../common/mixins' as mixins;
+@use '../common/variables' as vars;
 
 .slideInForward {
+  background-color: red;
   animation: slideInForward 1s forwards;
   @include mixins.slideIn;
-  @include mixins.media(vars.$G-breakpoints, pc) {
+  @include mixins.media("pc") {
     animation: slideInForwardPC 1s forwards;
   }
 }
 
 .slideOutForward {
+  background-color: blue;
   animation: slideOutForward 1s forwards;
   @include mixins.slideOut;
-  @include mixins.media(vars.$G-breakpoints, pc) {
+  @include mixins.media("pc") {
     animation: slideOutForwardPC 1s forwards;
   }
 }
@@ -20,7 +22,7 @@
 .slideInBackward {
   animation: slideInBackward 1s forwards;
   @include mixins.slideIn;
-  @include mixins.media(vars.$G-breakpoints, pc) {
+  @include mixins.media("pc") {
     animation: slideInBackwardPC 1s forwards;
   }
 }
@@ -28,7 +30,7 @@
 .slideOutBackward {
   animation: slideOutBackward 1s forwards;
   @include mixins.slideOut;
-  @include mixins.media(vars.$G-breakpoints, pc) {
+  @include mixins.media("pc") {
     animation: slideOutBackwardPC 1s forwards;
   }
 }

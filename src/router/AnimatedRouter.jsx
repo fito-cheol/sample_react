@@ -5,10 +5,12 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 import React from 'react';
 
+import '@/assets/style/components/transition.scss';
+
 function AnimatedRouter() {
 	const location = useLocation();
 	const navigationType = useNavigationType();
-	const transitionClass = navigationType === 'POP' ? 'backward' : 'forward';
+	const transitionClass = navigationType === 'POP' ? 'Backward' : 'Forward';
 	const [prevLocation, setPrevLocation] = useState(location);
 	const [transitioning, setTransitioning] = useState(false);
 	const mainRef = useRef('A');
@@ -40,6 +42,9 @@ function AnimatedRouter() {
 		let timer = null;
 		if (location.key !== prevLocation.key) {
 			setTransitioning(true);
+			// setTimeout(() => {
+			// 	debugger;
+			// }, 500);
 			timer = setTimeout(() => {
 				setTransitioning(false);
 				setPrevLocation(location);
@@ -60,6 +65,7 @@ function AnimatedRouter() {
 			return {
 				position: transitioning ? 'fixed' : 'relative',
 				display: show ? '' : 'none',
+				color: isMain ? 'red' : '',
 			};
 		}
 	};

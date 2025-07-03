@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.scss';
 import '@/assets/style/common/reset.scss';
-import '@/assets/style/transition.scss';
 
-import AppRouter from '@/router/router';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import { RecoilRoot } from 'recoil';
