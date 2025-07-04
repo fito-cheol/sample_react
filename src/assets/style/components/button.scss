@@ -1,0 +1,25 @@
+@use '../common/variables' as vars;
+
+.button {
+  margin-top: 16px;
+  height: 48px;
+  width: 100%;
+  padding: 0 16px;
+  font-size: 16px;
+  line-height: 22px;
+  color: vars.$color-blue700;
+  font-weight: 700;
+  border-radius: 12px;
+  background-color: vars.$color-tintBlue;
+  &.hover, 
+  &:active {
+    background-color: vars.$color-tintBluePress;
+  }
+  &:disabled {
+    cursor: not-allowed !important;
+    border: 0 !important;
+    color: vars.$color-gray500 !important;
+    background-color: #ded6de !important;
+  }
+
+}
