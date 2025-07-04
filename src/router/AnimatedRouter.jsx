@@ -1,8 +1,6 @@
 import { useLocation, useNavigationType, useRoutes } from 'react-router-dom';
 import Routes from './Routes';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import React from 'react';
 
 import '@/assets/style/components/transition.scss';
