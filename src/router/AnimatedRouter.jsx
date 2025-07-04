@@ -8,15 +8,17 @@ import '@/assets/style/components/transition.scss';
 function AnimatedRouter() {
 	const location = useLocation();
 	const navigationType = useNavigationType();
-	const transitionClass = navigationType === 'POP' ? 'backward' : 'forward';
+	const transitionClass = navigationType === 'POP' ? 'Backward' : 'Forward';
 
 	const [rerenderTrigger, setRerenderTrigger] = useState(true);
 
 	const mainRef = useRef('A');
+
 	const prevLocationRef = useRef(location);
 	const tranLocationRef = useRef(location);
 	const transitioningRef = useRef(false);
 	const canRenderRef = useRef(false);
+
 	const timeout = useRef(null);
 
 	const switchMain = () => {
@@ -30,10 +32,10 @@ function AnimatedRouter() {
 		switchMain();
 		transitioningRef.current = true;
 		canRenderRef.current = true;
-	}
 
-	if (timeout.current) {
-		clearTimeout(timeout.current);
+		if (timeout.current) {
+			clearTimeout(timeout.current);
+		}
 		timeout.current = setTimeout(() => {
 			transitioningRef.current = false;
 			setRerenderTrigger((prev) => !prev);
@@ -64,7 +66,7 @@ function AnimatedRouter() {
 				<div
 					className={
 						transitioning
-							? `${isAMain ? 'slidein' : 'slideout'} ${transitionClass}`
+							? `${isAMain ? 'slideIn' : 'slideOut'}${transitionClass}`
 							: ''
 					}
 					key={keyA}
@@ -76,7 +78,7 @@ function AnimatedRouter() {
 				<div
 					className={
 						transitioning
-							? `${isBMain ? 'slidein' : 'slideout'} ${transitionClass}`
+							? `${isBMain ? 'slideIn' : 'slideOut'}${transitionClass}`
 							: ''
 					}
 					key={keyB}
