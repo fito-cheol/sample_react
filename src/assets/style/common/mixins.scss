@@ -18,7 +18,7 @@ $pc-breakpoint: map.get(vars.$G-breakpoints, "pc");
 @mixin slideOut {
   position: fixed;
   width: 100%;
-  top: 54px;
+  top: 88px;
   left: 0;
   bottom: 0;
   z-index: 1;
@@ -28,7 +28,7 @@ $pc-breakpoint: map.get(vars.$G-breakpoints, "pc");
 }
 
 @mixin slideIn {
-  top: 54px;
+  top: 88px;
   width: 100%;
   left: 0;
   z-index: 2;
