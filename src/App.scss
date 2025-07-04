@@ -1,4 +1,5 @@
 @use './assets/style/common/variables.scss' as vars;
+@use './assets/style/common/mixins' as mixins;
 
 body {
   font-size: 16px;
@@ -21,4 +22,6 @@ body {
 .container {
   max-width:1200px;
   margin:0 auto;
+  min-height: 100vh;
+  
 }
