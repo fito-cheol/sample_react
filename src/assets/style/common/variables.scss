@@ -5,6 +5,19 @@ $fontRegular: 400;
 $fontLight: 300;
 $fontThin: 100;
 
+
+$maxWidth: 1200px;
+$contentWidth: 792px;
+$contentWidthMain: 996px;
+$headerMoH: 54px;
+$layout-side: 24px;
+$bosHeaderH: 56px;
+$layout-sidePc: 30px;
+$layout-maxWidth: $maxWidth + $layout-sidePc * 2;
+
+$color-black: #101116;
+$color-lightGray50: #f3f4f7;
+
 $color-blue: #2873e3;
 
 $color-blue500: #4394f0;

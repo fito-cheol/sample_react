@@ -1,17 +1,24 @@
+@use './assets/style/common/variables.scss' as vars;
+
 body {
   font-size: 16px;
   color: white;
-  background-color: black;
+  background-color: teal;
   display: block;
+  width: 100%;
 }
 
 .wrap {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 1200px;
+  max-width: vars.$maxWidth;
+  min-width: 200px;
   margin: 0 auto;
   font-size: 16px;
   line-height: 20px;
-
+}
+.container {
+  max-width:1200px;
+  margin:0 auto;
 }

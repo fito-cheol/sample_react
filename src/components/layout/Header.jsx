@@ -7,13 +7,11 @@ const Header = () => {
 		<header className="header">
 			<div className="header_global_navi">
 				<div className="header_global_navi_inner">
-					<nav className="nav_list">
-						<ul style={{ display: 'flex' }}>
-							<StyledLink to="/">홈</StyledLink>
-							<StyledLink to="/about">소개</StyledLink>
-							<StyledLink to="/contact">연락처</StyledLink>
-						</ul>
-					</nav>
+					<ul className="nav_list">
+						<StyledLink to="/">홈</StyledLink>
+						<StyledLink to="/about">소개</StyledLink>
+						<StyledLink to="/contact">연락처</StyledLink>
+					</ul>
 				</div>
 			</div>
 		</header>
@@ -25,7 +23,8 @@ const StyledLink = (props) => {
 
 	const location = useLocation();
 	const isActive =
-		location.pathname !== '/' && to.startsWith(location.pathname);
+		to === location.pathname ||
+		(location.pathname !== '/' && to.startsWith(location.pathname));
 	return (
 		<li className={`nav_item ${isActive ? `active` : ''}`}>
 			<Link to={to}>{children}</Link>

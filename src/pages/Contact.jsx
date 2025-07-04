@@ -1,6 +1,6 @@
 function Contact() {
 	return (
-		<div style={{ backgroundColor: '#eeddddd' }}>
+		<div className="container" style={{ backgroundColor: '#eeddddd' }}>
 			<span>연락</span>
 		</div>
 	);

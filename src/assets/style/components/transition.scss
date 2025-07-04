@@ -2,7 +2,6 @@
 @use '../common/variables' as vars;
 
 .slideInForward {
-  background-color: red;
   animation: slideInForward 1s forwards;
   @include mixins.slideIn;
   @include mixins.media("pc") {
@@ -11,7 +10,6 @@
 }
 
 .slideOutForward {
-  background-color: blue;
   animation: slideOutForward 1s forwards;
   @include mixins.slideOut;
   @include mixins.media("pc") {
